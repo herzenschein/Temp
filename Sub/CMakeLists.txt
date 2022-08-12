@@ -1,42 +1,19 @@
-cmake_minimum_required(VERSION 3.16)
-
-
-
-# Options
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-
-
-# Qt
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
-
-# Language
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
-
 # Dependencies
 find_package(Qt6 6.2 COMPONENTS Core Quick REQUIRED)
-
-
-
-add_library(something SHARED
-                    something.cpp
-                    something.hpp
-)
-
-target_link_libraries(something
-                    PRIVATE
-                        Qt6::Core
-                        Qt6::Quick
-)
-
 
 # Qml-Module
 qt6_add_qml_module(something
     URI TestApp.Models
     VERSION 1.0
+    STATIC
+    SOURCES
+        something.cpp
+        something.hpp
+)
+
+
+target_link_libraries(something
+                    PRIVATE
+                        Qt6::Core
+                        Qt6::Quick
 )

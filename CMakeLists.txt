@@ -38,10 +38,11 @@ target_compile_definitions(appTesting
 
 target_link_libraries(appTesting
                 PUBLIC
-                    something
                     Qt6::Quick
+                    something
 )
+
 target_include_directories(appTesting
-                PUBLIC
+                PRIVATE
                     Sub/
 )
