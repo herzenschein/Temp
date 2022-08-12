@@ -26,7 +26,6 @@ find_package(Qt6 6.2 COMPONENTS Core Quick REQUIRED)
 add_library(something SHARED
                     something.cpp
                     something.hpp
-                    librum_global.hpp
 )
 
 target_link_libraries(something
@@ -34,8 +33,6 @@ target_link_libraries(something
                         Qt6::Core
                         Qt6::Quick
 )
-
-target_compile_definitions(something PRIVATE MYSHAREDLIB_LIBRARY)
 
 
 # Qml-Module
