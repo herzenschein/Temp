@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.20)
 
 project(Testing VERSION 1.0 LANGUAGES CXX)
 
-list(APPEND QML_IMPORT_PATH "/Sub")
-list(APPEND QML_IMPORT_PATH "${CMAKE_CURRENT_BINARY_DIR}/Sub")
+
 
 # Qt
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
+
 
 
 # Language

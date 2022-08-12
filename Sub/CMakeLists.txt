@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 
 
+
+# Options
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
+
 # Qt
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
