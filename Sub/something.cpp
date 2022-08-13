@@ -1,13 +1,8 @@
-#include "something.hpp"
 #include <QDebug>
-
-
-Something::Something()
-{
-
-}
+#include "something.hpp"
 
 void Something::doSomething()
 {
-    qDebug() << "Something!!!";
+    // qInfo() has the advantage that it shows in the Application Output window in QtCreator.
+    qInfo() << "Something!!!";
 }

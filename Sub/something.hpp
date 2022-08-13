@@ -1,14 +1,14 @@
 #pragma once
-#include "QtQmlIntegration/qqmlintegration.h"
 #include <QObject>
+#include "QtQmlIntegration/qqmlintegration.h"
 
-
-class Something : public QObject
+class Q_DECL_EXPORT Something : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
 
 public:
-    Something();
+    // No need for the constructor
+    // if you're not going to use it yet, see "rule of zero".
     Q_INVOKABLE void doSomething();
 };
